@@ -1,0 +1,378 @@
+
+#container {
+    background-color: #FFEF5E;
+    width: 900px;
+    height: 700px;
+    margin: 20px auto;
+    position: relative;
+}
+// 小丸子
+.wanzi {
+    position: absolute;
+    left: 280px;
+    top: 70px;
+    transform: scale(1.65);
+    .hair {
+        width: 190px;
+        height: 250px;
+        background-color: #152131;
+        border-radius: 50% 50% 0 0;
+        overflow: hidden;
+        position: absolute;
+        &:after {
+            content: '';
+            height: 125px;
+            width: 300px;
+            background-color: #FFEF5E;
+            position: absolute;
+            bottom: 0;
+        }
+        .h {
+            width: 35px;
+            height: 45px;
+            background-color: #152131;
+            transform: rotate(70deg) scale(1) skew(44deg) translate(8px);
+            position: absolute;
+            z-index: 9;
+        }
+        .h-1 {
+            left: 28px;
+            top: 22px;
+        }
+        .h-2 {
+            left: 50px;
+            top: 12px;
+        }
+        .h-3 {
+            left: 68px;
+            top: 9px;
+        }
+        .h-4 {
+            left: 85px;
+            top: 5px;
+        }
+        .h-5 {
+            left: 102px;
+            top: 9px;
+        }
+        .h-6 {
+            left: 119px;
+            top: 8px;
+        }
+        .h-7 {
+            left: 137px;
+            top: 16px;
+        }
+    }
+    .face {
+        width: 130px;
+        height: 100px;
+        background-color: #FBDAC7;
+        border: 1px solid #152131;
+        border-radius: 20px 20px 50px 50px;
+        position: absolute;
+        top: 60px;
+        left: 28px;
+        &:after {
+            content: '';
+            width: 14px;
+            height: 10px;
+            background-color: #fbdac7;
+            border: 1px solid #152131;
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            margin-left: -7px;
+        }
+        .left-brow, .right-brow {
+            width: 42px;
+            height: 10px;
+            background-color: #152131;
+            position: absolute;
+            top: 20px;
+            border-radius: 50%;
+            &:after {
+                content: '';
+                width: 50px;
+                height: 10px;
+                background-color: #fbdac7;
+                border-radius: 50%;
+                position: absolute;
+                top: 1px;
+            }
+        }
+        .left-brow {
+            left: 18px;
+            transform: rotate(-10deg);
+        }
+        .right-brow {
+            right: 14px;
+            transform: rotate(10deg);
+        }
+        .left-eye, .right-eye {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #000;
+            position: absolute;
+            top: 35px;
+            z-index: 2;
+        }
+        .left-eye {
+            left: 36px;
+        }
+        .right-eye {
+            right: 40px;
+        }
+        .left-blusher, .right-blusher {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #f79c99;
+            position: absolute;
+            top: 66px;
+        }
+        .left-blusher {
+            left: 5px;
+        }
+        .right-blusher {
+            right: 5px;
+        }
+        .left-ear, .right-ear {
+            width: 10px;
+            height: 20px;
+            background-color: #fbdac7;
+            position: absolute;
+            top: 30px;
+            z-index: 2;
+        }
+        .left-ear {
+            left: -11px;
+            border-radius: 5px 0 0 10px;
+        }
+        .right-ear {
+            right: -11px;
+            border-radius: 0 5px 10px 0;
+        }
+        .mouth {
+            width: 30px;
+            height: 30px;
+            background-color: #d96b6e;
+            border: 1px solid #152131;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+            &:after {
+                content: '';
+                width: 60px;
+                height: 30px;
+                background-color: #fbdac7;
+                border-radius: 30%;
+                position: absolute;
+                top: -10px;
+                left: -20px;
+            }
+        }
+    }
+}
+// 上衣
+.clothes {
+    width: 70px;
+    height: 80px;
+    background-color: #fff;
+    border: 1px solid #152131;
+    border-radius: 30% 30% 10px 10px;
+    position: absolute;
+    top: 173px;
+    left: 57px;
+    overflow: hidden;
+    z-index: 2;
+    .collar {
+        width: 20px;
+        height: 10px;
+        background-color: #fff;
+        border: 1px solid #152131;
+        position: absolute;
+        z-index: 3;
+    }
+    .left-collar {
+        left: 12px;
+        transform: rotate(50deg);
+    }
+    .right-collar {
+        right: 12px;
+        transform: rotate(-50deg);
+    }
+    .straps {
+        width: 6px;
+        height: 100px;
+        background-color: #e9003a;
+        border: 1px solid #152131;
+        position: absolute;
+        z-index: 2;
+    }
+    .left-straps {
+        left: 12px;
+    }
+    .right-straps {
+        right: 12px;
+    }
+}
+// 手臂
+.arm {
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    border: 1px solid #152131;
+    border-radius: 50%;
+    position: absolute;
+    top: 178px;
+}
+.left-arm {
+    left: 34px;
+    &:after {
+        content: '';
+        width: 60px;
+        height: 60px;
+        background-color: #ffef5e;
+        border: 1px solid #152131;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        left: 12px;
+    }
+}
+.right-arm {
+    left: 79px;
+    &:after {
+        content: '';
+        width: 60px;
+        height: 60px;
+        background-color: #ffef5e;
+        border: 1px solid #152131;
+        border-radius: 50%;
+        position: absolute;
+        top: 5px;
+        left: -4px;
+    }
+}
+// 腰带
+.belt {
+        width: 70px;
+        height: 10px;
+        border: 1px solid #152131;
+        background-color: #ed023a;
+        z-index: 3;
+        position: absolute;
+        bottom: -255px;
+        left: 57px;
+}
+// 裙子
+.skirt {
+    width: 72px;
+    height: 0;
+    border-width: 0 30px 50px;
+    border-style: solid;
+    border-color: #e9003a transparent;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    top: 255px;
+    left: 27px;
+    z-index: 3;
+    .line {
+        width: 1px;
+        height: 30px;
+        background-color: #000;
+        position: absolute;
+        top: 10px;
+    }
+    .line-1 {
+        left: 7px;
+        transform: rotate(20deg);
+    }
+    .line-2 {
+        left: 22px;
+        transform: rotate(10deg);
+    }
+    .line-3 {
+        left: 35px;
+    }
+    .line-4 {
+        right: 23px;
+        transform: rotate(-10deg);
+    }
+    .line-5 {
+        right: 7px;
+        transform: rotate(-20deg);
+    }
+}
+// 腿
+.leg {
+    width: 12px;
+    height: 40px;
+    border: 1px solid #152131;
+    background-color: #fadbc7;
+    position: absolute;
+    top: 295px;
+    z-index: 2;
+    &:after {
+        content: '';
+        width: 12px;
+        height: 16px;
+        background-color: #fff;
+        border-style: solid solid none;
+        border-width: 1px 1px 0;
+        border-color: #152131 #152131 red;
+        position: absolute;
+        top: 26px;
+        left: -1px;
+    }
+}
+.left-leg {
+    left: 64px;
+}
+.right-leg {
+    left: 110px;
+}
+// 袜子
+.socks {
+    width: 28px;
+    height: 12px;
+    background-color: #fff;
+    border: 1px solid #152131;
+    z-index: 1;
+    // transform-origin: 0 0 0;
+    position: absolute;
+    top: 330px;
+}
+.left-socks {
+    left: 47px;
+    border-radius: 50% 0 0 50%;
+    transform: rotate(-20deg);
+}
+.right-socks {
+    left: 111px;
+    border-radius: 0 50% 50% 0;
+    transform: rotate(20deg);
+}
+// 鞋子
+.shoes {
+    width: 40px;
+    height: 17px;
+    background-color: #a23030;
+    position: absolute;
+    top: 332px;
+    z-index: 0;
+}
+.left-shoes {
+    left: 38px;
+    border-radius: 50% 0 0 50%;
+    transform: rotate(-20deg);
+}
+.right-shoes {
+    left: 109px;
+    border-radius: 0 50% 50% 0;
+    transform: rotate(20deg);
+}
